@@ -17,5 +17,5 @@ function draw(){
   ctx.fillRect(px,py,playerx,player);
 }
 while (true){
-  update();
+  requestAnimationFrame(loop);
 }
