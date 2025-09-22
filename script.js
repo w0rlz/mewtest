@@ -16,5 +16,6 @@ function reset(){
 function draw(){
   ctx.fillRect(px,py,playerx,player);
 }
-
-update(loop);
+while (true){
+  update();
+}
