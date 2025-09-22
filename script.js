@@ -1,21 +1,25 @@
+🔹 script.js
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext('2d');
 
-let playerx = 0;
-let playery = 0;
 let px = 10;
 let py = 10;
+let playerWidth = 50;
+let playerHeight = 50;
 
-function update(){
+function update() {
   reset();
   draw();
+  requestAnimationFrame(update);
 }
-function reset(){
+
+function reset() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
-function draw(){
-  ctx.fillRect(playerx,playery,px,y);
+
+function draw() {
+  ctx.fillStyle = 'blue';
+  ctx.fillRect(px, py, playerWidth, playerHeight);
 }
-while (true){
-  requestAnimationFrame(loop);
-}
+
+update();
