@@ -14,7 +14,7 @@ function reset(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 function draw(){
-  ctx.fillRect(px,py,playerx,player);
+  ctx.fillRect(playerx,playery,px,y);
 }
 while (true){
   requestAnimationFrame(loop);
